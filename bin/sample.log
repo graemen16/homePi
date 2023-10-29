@@ -1,0 +1,14 @@
+INFO:root:Informational message
+ERROR:root:An error has happened!
+DEBUG:root:This is a debug message
+INFO:root:Informational message
+ERROR:root:An error has happened!
+2017-04-28 15:47:49,936 This is a debug message
+2017-04-28 15:47:49,937 Informational message
+2017-04-28 15:47:49,937 An error has happened!
+DEBUG: 2017-04-28 15:49:03,321 This is a debug message
+INFO: 2017-04-28 15:49:03,321 Informational message
+ERROR: 2017-04-28 15:49:03,322 An error has happened!
+2017-04-28 15:49:55,611 DEBUG: This is a debug message
+2017-04-28 15:49:55,612 INFO: Informational message
+2017-04-28 15:49:55,612 ERROR: An error has happened!

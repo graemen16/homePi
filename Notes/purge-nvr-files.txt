@@ -1,0 +1,3 @@
+https://amcrest.com/forum/technical-discussion-f3/the-archive-of-the-snapshot-is-crazy-t1310.html
+
+See script in above forum discussion on way of moving files in directories. could you similar for purging.

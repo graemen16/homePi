@@ -1,0 +1,13 @@
+Setup of FTP using pure-FTPD
+
+see: https://www.raspberrypi.org/documentation/remote-access/ftp.md
+
+Installed pure-ftpd
+Added group ftpcameras
+Added user ftpcamera
+
+Using GigaStore as FTP destination - see separate notes on mounting
+Crated virtual users camera1 (passw:rgbcam1a) and camera2 (passw:rgbcam2a)
+Created virtual user database
+made authentication link (?)
+ 

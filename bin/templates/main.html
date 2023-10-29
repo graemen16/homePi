@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {background-color: powderblue;}
+h1   {	color: DarkBlue;
+		font-family: verdana;
+		font-size: 120%;
+		}
+h2 { color: black;;
+		font-family: verdana;
+		font-size: 100%;
+		}
+p    {color: grey;}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightBlue;
+}
+
+li {
+    float: left;
+}
+
+li {
+		font-family: verdana;
+		font-size: 100%;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+</style>
+      <title>{{ title }}</title>
+   </head>
+
+   <body>
+	   <header>
+		   <h1>Casa Nelson Raspberry Pi</h1>
+		   <hr>
+	   </header>
+	   <section>
+		   <h2> <img src={{ wicon_url }} alt={{ weather['weather']['description'] }} width="50" height="50"> {{ weather['weather']['description'] }}</h2> 
+		   <ul>
+			   <li>{{ weather['main']['temp'] }} deg C</li>
+			   <li>{{ weather['clouds']['all'] }} % clouds</li>
+			   <li>{{ weather['main']['pressure'] }} mbar</li>
+			   <li>{{ weather['main']['humidity'] }} % RH</li>
+			   <li>{{ weather['wind']['speed'] }} km/h</li>
+		   </ul>
+		   <p> Weather data logged: {{ data_time }}</p>
+		   <hr />
+		   <h1> Socket status:</h1>
+		   {% for ss in sockets %}
+		   <h2> {{ sockets[ss]['use'] }} : {{ sockets[ss]['stat'] }} 
+		   {% if sockets[ss]['stat'] == 'On' %}
+		   (<a href="/{{ss}}/off">turn off</a>)
+		   {% else %}
+		   (<a href="/{{ss}}/on">turn on</a>)
+		   {% endif %}
+		   </h2>
+		   <p>{{ ss }} : {{ sockets[ss]['man']}} : {{ sockets[ss]['time'] }}</p>
+		   {% endfor %}
+		   <hr />
+		   <h1>Camera disk usage:</h1>
+		   <h2>Total: {{cameras['du']}} | Left: {{ cameras['left']['du']}} | Right: {{ cameras['right']['du']}}</h2>
+	   </section>
+      
+      
+      <footer>
+		  <p>Served at: {{ time }} <a href="/">refresh</a></p>
+      </footer>
+  </body>
+</html>
